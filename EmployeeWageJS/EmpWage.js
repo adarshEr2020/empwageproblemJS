@@ -72,3 +72,15 @@ function fullTimeWage(dailyWage){
 let fullDayWageArray = mapDayWihtWageArray.filter(fullTimeWage);
 console.log("UC7C -Daily wage Filter when Full time wage earned:")
 console.log(fullDayWageArray);
+
+// Find the first occurrence when full Time wage was earned using Find function
+function findFullTimeWage(dailyWage){
+    return dailyWage.includes("160");
+}
+console.log("First time FullTime wage was earned on day" +mapDayWihtWageArray.find(findFullTimeWage));
+
+// UC7F - check if there is any part time wage
+function isAnyPartTimeWage(dailyWage) {
+    return dailyWage.includes("80");
+}
+console.log("UCF - check if any Part Time Wage: " +mapDayWihtWageArray.some(isAnyPartTimeWage));
